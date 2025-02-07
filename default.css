@@ -1,3 +1,7 @@
+:root {
+	--base-font-size: calc(1vmin * 4);
+}
+
 body {
 	margin: 0;
 	color: #000;
@@ -16,15 +20,15 @@ body {
 }
 
 .font-xl {
-	font-size: 80px;
+	font-size: calc(var(--base-font-size) * 2.2);
 }
 
 .font-large {
-	font-size: 50px;
+	font-size: calc(var(--base-font-size) * 1.66);
 }
 
 .font-medium {
-	font-size: 30px;
+	font-size: var(--base-font-size);
 }
 
 .name {
@@ -63,9 +67,15 @@ hr {
 	padding: 10px;
 	text-align: center;
 	box-shadow: rgba(30, 30, 30, 0.3) 0px 0px 5px 5px;
-	background: rgba(255, 255, 255, .5);
+	background-color: rgba(181, 206, 224, 0.85);
 	max-width: 60%;
 	margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 620px) {
+	.panel {
+		max-width: 90%;
+	}
 }
 
 .store-link img {
